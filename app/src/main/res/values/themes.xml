@@ -1,9 +1,23 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Construccion_layouts" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
+<resources>
 
-    <style name="Theme.Construccion_layouts" parent="Base.Theme.Construccion_layouts" />
+    <!-- Tema personalizado para la aplicación Play Juegos -->
+    <style name="PlayJuegosTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Cambia el color de la barra de acción -->
+        <item name="colorPrimary">@color/mi_color_primary</item>
+        <item name="colorPrimaryVariant">@color/mi_color_primary_variant</item>
+
+        <!-- Cambia el color de fondo de la barra de estado -->
+        <item name="android:statusBarColor">@color/mi_color_status_bar</item>
+
+        <!-- Cambia el color de fondo de la barra de navegación (si es necesario) -->
+        <item name="android:navigationBarColor">@color/mi_color_navigation_bar</item>
+
+        <!-- Cambia el color del texto en la barra de acción -->
+        <item name="android:textColorPrimary">@color/mi_color_text_primary</item>
+
+        <!-- Cambia el color del texto secundario (por ejemplo, en los botones) -->
+        <item name="android:textColorSecondary">@color/mi_color_text_secondary</item>
+
+        <!-- Otros cambios que desees hacer -->
+    </style>
 </resources>

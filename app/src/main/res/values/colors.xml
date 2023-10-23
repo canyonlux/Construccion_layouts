@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="mi_color_primary">#FF6200EA</color>
+    <color name="mi_color_primary_variant">#FF3700B3</color>
+    <color name="mi_color_status_bar">#FF6200EA</color>
+    <color name="mi_color_navigation_bar">#FF3700B3</color>
+    <color name="mi_color_text_primary">#FF000000</color>
+    <color name="mi_color_text_secondary">#FF757575</color>
 </resources>
