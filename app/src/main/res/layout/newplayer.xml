@@ -9,30 +9,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:context=".NewPlayer"
-        android:padding="10dp"
-        >
+        android:padding="10dp">
 
         <Button
             android:id="@+id/button2"
             android:layout_width="0dp"
-            android:layout_height="62dp"
-            android:layout_marginBottom="21dp"
-            android:background="@color/material_dynamic_primary70"
-            android:backgroundTint="@color/design_default_color_secondary"
+            android:layout_height="75dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginEnd="18dp"
+            android:background="@color/design_default_color_secondary"
+            android:backgroundTint="@color/design_default_color_secondary_variant"
             android:padding="10dp"
             android:text="CHANGE"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText4"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView7"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView10"
             app:layout_constraintTop_toTopOf="@+id/imageView10" />
 
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="100dp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView7"
-            app:layout_constraintEnd_toStartOf="@+id/editTextText"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="17dp"
+            app:layout_constraintEnd_toStartOf="@+id/textInputLayout5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar"
             app:srcCompat="@android:drawable/ic_menu_myplaces" />
@@ -41,150 +41,186 @@
             android:id="@+id/imageView7"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="41dp"
+            android:layout_marginBottom="60dp"
             app:layout_constraintBottom_toTopOf="@+id/imageView8"
-            app:layout_constraintEnd_toStartOf="@+id/editTextText3"
+            app:layout_constraintEnd_toStartOf="@+id/imageView10"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText2"
             app:srcCompat="@android:drawable/ic_menu_camera" />
 
         <ImageView
             android:id="@+id/imageView8"
             android:layout_width="50dp"
             android:layout_height="49dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="25dp"
             app:layout_constraintBottom_toTopOf="@+id/imageView9"
-            app:layout_constraintEnd_toStartOf="@+id/editTextText4"
+            app:layout_constraintEnd_toStartOf="@+id/textInputLayout3"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7"
             app:srcCompat="@android:drawable/ic_menu_call" />
 
         <ImageView
             android:id="@+id/imageView9"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginTop="56dp"
             android:layout_marginEnd="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/editTextText4"
+            app:layout_constraintEnd_toStartOf="@+id/textInputLayout2"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8"
             app:srcCompat="@android:drawable/ic_dialog_email" />
 
         <ImageView
             android:id="@+id/imageView10"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginBottom="13dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="29dp"
             android:background="#131313"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText4"
-            app:layout_constraintEnd_toStartOf="@+id/button2"
             app:layout_constraintStart_toEndOf="@+id/imageView7"
-            app:layout_constraintTop_toTopOf="@+id/imageView7"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
             app:srcCompat="@drawable/ic_launcher_foreground" />
 
-        <EditText
-            android:id="@+id/editTextText"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout5"
             android:layout_width="0dp"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="90dp"
-            android:layout_marginBottom="10dp"
-            android:ems="10"
-            android:inputType="text"
-            android:text="Name"
             app:layout_constraintBottom_toTopOf="@+id/editTextText2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView6"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-        <EditText
-            android:id="@+id/editTextText2"
+            <EditText
+                android:id="@+id/editTextText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:inputType="text"
+                android:text="Name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="90dp"
-            android:layout_marginBottom="10dp"
-            android:ems="10"
-            android:inputType="text"
-            android:text="Phonetic name"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText3"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextText2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"  >
 
-        <EditText
-            android:id="@+id/editTextText3"
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout4"
             android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="90dp"
-            android:layout_marginBottom="5dp"
-            android:ems="10"
-            android:inputType="text"
-            android:text="Nickname"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toTopOf="@+id/imageView10"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView7"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextText2">
 
-        <EditText
-            android:id="@+id/editTextText4"
+            <EditText
+                android:id="@+id/editTextText3"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:inputType="text"
+                android:text="Nickname" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout3"
             android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="90dp"
-            android:ems="10"
-            android:inputType="text"
-            android:text="Phone"
             app:layout_constraintBottom_toTopOf="@+id/imageView9"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView8"
             app:layout_constraintTop_toBottomOf="@+id/imageView10"
-            app:layout_constraintVertical_bias="0.489" />
+            app:layout_constraintVertical_bias="0.489">
 
-        <EditText
-            android:id="@+id/editTextText5"
+            <EditText
+                android:id="@+id/editTextText4"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:inputType="text"
+                android:text="Phone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
             android:layout_width="0dp"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="90dp"
-            android:ems="10"
-            android:inputType="text"
-            android:text="E-mail"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/imageView9"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText4"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="@+id/imageView9">
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="50dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="32dp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText4"
-            app:layout_constraintVertical_bias="0.181" />
+            <EditText
+                android:id="@+id/editTextText5"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:inputType="text"
+                android:text="E-mail" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
             android:background="@color/mi_color_primary"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText"
+            app:layout_constraintBottom_toTopOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:title="Play Juegos"
-            />
+            app:title="Play Juegos" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="365dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+
+        <EditText
+            android:id="@+id/editTextText2"
+            android:layout_width="348dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="0dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Phonetic name"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayout4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
