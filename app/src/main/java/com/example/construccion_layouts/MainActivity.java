@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         // Encuentra el botón jugador y establece el OnClickListener
         Button jugador = findViewById(R.id.button1);
         jugador.setOnClickListener(new View.OnClickListener() {
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
         // Encuentra el botón preferences y establece el OnClickListener
         Button preferences = findViewById(R.id.button3);
         preferences.setOnClickListener(new View.OnClickListener() {
@@ -31,7 +35,30 @@ public class MainActivity extends AppCompatActivity {
                 lanzarPreferences();
             }
         });
+
+
+        // Encuentra el botón games y establece el OnClickListener
+        Button games = findViewById(R.id.button);
+        games.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lanzarGames();
+            }
+        });
+
+        // Encuentra el botón jugador y establece el OnClickListener
+        Button about = findViewById(R.id.button4);
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lanzarChipActivity();
+            }
+        });
+
     }
+
+
+
 
     private void lanzarNewPlayer() {
         // Método que se ejecuta al pulsar el botón jugador
@@ -41,7 +68,18 @@ public class MainActivity extends AppCompatActivity {
 
     private void lanzarPreferences() {
         // Método que se ejecuta al pulsar el botón preferences
-        Intent i = new Intent(this, Preferences.class); // Asegúrate de que el nombre de la clase es correcto
+        Intent i = new Intent(this, Preferences.class);
+        startActivity(i);
+    }
+    private void lanzarGames() {
+        // Método que se ejecuta al pulsar el botón de juegos
+        Intent i = new Intent(this, Games.class);
+        startActivity(i);
+    }
+
+    private void lanzarChipActivity() {
+        // Método que se ejecuta al pulsar el botón about
+        Intent i = new Intent(MainActivity.this, Chip.class);
         startActivity(i);
     }
 }
