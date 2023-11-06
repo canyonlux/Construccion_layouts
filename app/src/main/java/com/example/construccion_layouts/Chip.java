@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 
 public class Chip extends AppCompatActivity {
 
@@ -13,14 +15,17 @@ public class Chip extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chip);
+// Inicializa el ListView
+        ListView listView = findViewById(R.id.listView);
 
-        Button about = findViewById(R.id.button4);
-        about.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Chip.this, MainActivity.class); // Asumiendo que tienes una actividad llamada AboutActivity
-                startActivity(intent);
-            }
-        });
+        // Crea un array de elementos que quieras mostrar en tu ListView
+        String[] items = new String[]{"Accion", "Aventura", "Deportes", "Disparos","Estrategia", "Lucha", "Musical", "Rol", "Simulacion"};
+
+        // Crea un ArrayAdapter utilizando el layout simple_list_item_1 de Android y tu array de elementos
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items);
+
+        // Establece el adaptador en tu ListView
+        listView.setAdapter(adapter);
+
     }
 }
