@@ -27,11 +27,19 @@
         app:layout_anchor="@id/bottom_app_bar"
         app:layout_anchorGravity="top|center">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Plataformas"
+            android:textSize="24sp" />
+
+
+
 
     <com.google.android.material.chip.ChipGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:padding="16dp"
         app:chipSpacingHorizontal="10dp"
         app:singleSelection="true">
