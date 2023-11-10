@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Tema personalizado para la aplicación Play Juegos -->
-    <style name="PlayJuegosTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="PlayJuegosTheme" parent="Theme.MaterialComponents.DayNight">
         <!-- Cambia el color de la barra de acción -->
         <item name="colorPrimary">@color/mi_color_primary</item>
         <item name="colorPrimaryVariant">@color/mi_color_primary_variant</item>
