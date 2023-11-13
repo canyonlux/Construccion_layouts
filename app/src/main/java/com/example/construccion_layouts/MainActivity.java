@@ -5,12 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Encuentra el botón jugador y establece el OnClickListener
+        // Encuentra el botón about y establece el OnClickListener
         Button about = findViewById(R.id.button4);
         about.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 lanzarChipActivity();
             }
         });
+
 
     }
 
@@ -90,9 +88,22 @@ public class MainActivity extends AppCompatActivity {
 
     private void lanzarChipActivity() {
         // Método que se ejecuta al pulsar el botón about
-        Intent i = new Intent(MainActivity.this, Chip.class);
+        Intent i = new Intent(MainActivity.this, About.class);
         startActivity(i);
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 }
 
 

@@ -8,17 +8,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class GenerosViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-    public TextView textViewGenero;
+    protected TextView textoElemento;
 
     public GenerosViewHolder(View itemView) {
         super(itemView);
-        textViewGenero = itemView.findViewById(R.id.textViewGenero); // Asume que tienes un TextView con este ID en tu layout de ítem
+        textoElemento = itemView.findViewById(R.id.textView); // Asume que tienes un TextView con este ID en tu layout de ítem
         itemView.setOnClickListener(this);
     }
 
+
     @Override
-    public void onClick(View view) {
-        // Muestra un Toast con el nombre del género
-        Toast.makeText(view.getContext(), textViewGenero.getText(), Toast.LENGTH_SHORT).show();
+    public void onClick(View v) {
+        Toast.makeText(v.getContext(), "Has pulsado sobre " + textoElemento.getText(), Toast.LENGTH_SHORT).show();
     }
+
 }
