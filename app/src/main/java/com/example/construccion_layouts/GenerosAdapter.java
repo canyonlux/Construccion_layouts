@@ -30,7 +30,7 @@ public class GenerosAdapter extends RecyclerView.Adapter<GenerosAdapter.ViewHold
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.text_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.text_item_generos, parent, false);
         return new ViewHolder(view);
     }
 

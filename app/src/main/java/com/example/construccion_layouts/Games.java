@@ -3,6 +3,7 @@ package com.example.construccion_layouts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.Toast;
@@ -39,7 +40,11 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
             }
         });
     }
-
+     public boolean onCreateOptionsMenu(Menu menu) {
+         // Infla el menú; esto agrega elementos a la barra de acción si está presente.
+         getMenuInflater().inflate(R.menu.menu_main, menu);
+         return true;
+     }
     private void showSelectedGames() { // Método que maneja la selección
         StringBuilder selectedGames = new StringBuilder("Juegos seleccionados:\n"); // StringBuilder para almacenar el texto
 

@@ -3,6 +3,7 @@ package com.example.construccion_layouts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -52,5 +53,10 @@ public class NewPlayer extends AppCompatActivity {
         });
 
 
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Infla el menú; esto agrega elementos a la barra de acción si está presente.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
 }

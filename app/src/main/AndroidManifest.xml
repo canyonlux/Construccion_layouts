@@ -16,7 +16,7 @@
             android:name=".SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".About"
+            android:name=".Generos"
             android:exported="true" />
         <activity
             android:name=".Games"

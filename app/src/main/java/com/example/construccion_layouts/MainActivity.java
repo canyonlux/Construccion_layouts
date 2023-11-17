@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void lanzarChipActivity() {
         // Método que se ejecuta al pulsar el botón about
-        Intent i = new Intent(MainActivity.this, About.class);
+        Intent i = new Intent(MainActivity.this, Generos.class);
         startActivity(i);
     }
     @Override
